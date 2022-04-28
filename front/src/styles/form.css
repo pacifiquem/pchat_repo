@@ -1,0 +1,40 @@
+.form {
+    width: 30vw;
+    height: 65vh;
+    margin: 6em auto;
+    border: 1px grey solid;
+    box-shadow: grey 1px 1px;
+}
+
+.form h1{
+    margin: .5em auto 1em;
+    color: black;
+}
+.form h1 span {
+    color: rgb(0, 191, 255);
+}
+
+.label-input {
+display: relative;
+margin: 1.5em  auto .1em;
+}
+
+.submit, .label-input input{
+    display: block;
+    width: 20vw;
+    height: 4vh;
+}
+
+.label-input-container {
+    margin-left: 4.5em;
+}
+
+.submit {
+    width: 20.5vw;
+    height: 5vh; 
+    margin-top: 1.5em;
+}
+.haveAccount {
+    display: block;
+    margin-top: .5em;
+}
