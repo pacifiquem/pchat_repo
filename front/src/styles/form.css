@@ -7,7 +7,7 @@
 }
 
 .form h1{
-    margin: .5em auto 1em;
+    margin: .5em 5em 1em;
     color: black;
 }
 .form h1 span {
@@ -23,6 +23,10 @@ margin: 1.5em  auto .1em;
     display: block;
     width: 20vw;
     height: 4vh;
+    margin-top: .1em;
+}
+label{
+    margin-left: 7em;
 }
 
 .label-input-container {
@@ -32,7 +36,27 @@ margin: 1.5em  auto .1em;
 .submit {
     width: 20.5vw;
     height: 5vh; 
-    margin-top: 1.5em;
+    margin-top: 2em;
+    background-color: white;
+    margin: 1px grey solid;
+
+}
+.submit:hover{
+    animation-name: changeColor;
+    animation-duration: 400ms;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes changeColor {
+    from {
+        background-color: white;
+        color: black;
+    }
+    to{
+        background-color: grey;
+        color: white;
+    }
 }
 .haveAccount {
     display: block;
