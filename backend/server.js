@@ -4,9 +4,13 @@ const colors = require('colors');
 const mongoose = require('mongoose');
 
 const dbConnection = require('./config/db');
+const user_router = require('./routes/user-routes');
 
 const app = express();
-dbConnection();
+dbConnection(); //connecting to db
+
+app.use('/users', user_router);
+
 
 
 
