@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 
 
-const Usermodel = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -29,7 +29,7 @@ const Usermodel = mongoose.Schema({
 
 //get JWT
 
-Usermodel.methods.getJsonWebToken = () => {
+userSchema.methods.getJsonWebToken = () => {
     const token = jwt.sign({
         id: this._id,
         username: this.username
@@ -39,4 +39,4 @@ Usermodel.methods.getJsonWebToken = () => {
 }
 
 
-module.exports.Usermodel = mongoose.model('Users', Usermodel);
+module.exports.Usermodel = mongoose.model('Users', userSchema);
