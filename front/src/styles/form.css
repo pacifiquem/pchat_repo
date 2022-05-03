@@ -5,6 +5,9 @@
     border: 1px grey solid;
     box-shadow: grey 1px 1px;
 }
+#loginForm {
+    height: 55vh;
+}
 
 .form h1{
     margin: .5em 5em 1em;
