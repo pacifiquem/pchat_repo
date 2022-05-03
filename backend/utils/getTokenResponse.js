@@ -6,15 +6,13 @@ const Usermodel = require('../models/user-model');
 const getTokenResponse = (user, statusCode, res) => {
 
     //get token
-    const token = user.getTokenResponse();
+    const token = user.getJsonWebToken();
 
     //setting cookie options
     const cookie_options = {
         expiresIn: new Date(Date.now() + 2592000000),
         httpOnly: true
     };
-
-    console.log(cookie_options.expiresIn);
 
     //sending response with cookie
     res
