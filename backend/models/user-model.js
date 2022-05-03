@@ -27,5 +27,16 @@ const Usermodel = mongoose.Schema({
 });
 
 
+//get JWT
+
+Usermodel.methods.getJsonWebToken = () => {
+    const token = jwt.sign({
+        id: this._id,
+        username: this.username
+    }, process.env.JWT_SECRET_KEY);
+
+    return token;
+}
+
 
 module.exports.Usermodel = mongoose.model('Users', Usermodel);
