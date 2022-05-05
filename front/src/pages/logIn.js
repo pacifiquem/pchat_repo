@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import styles from '../styles/form.css'
+import React, { Component } from 'react';
+import styles from '../styles/form.css';
+import { Link } from 'react-router-dom';
 
 export class loginForm extends Component {
 
@@ -47,7 +48,7 @@ export class loginForm extends Component {
                             <input type="password" value={this.state.password} onChange={this.passwordHandler} />
                         </div>
                             <input type="submit" value="Sign Up" className="submit" />
-                            <span className="haveAccount">No account yet?  <a href='localhost:3000/signup'></a></span>
+                            <span className="haveAccount">Not have an accout yet?  <Link to='/signup'>signUp</Link></span>
                         </div>
                 </form>
           </div>

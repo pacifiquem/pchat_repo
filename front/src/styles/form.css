@@ -64,4 +64,8 @@ label{
 .haveAccount {
     display: block;
     margin-top: .5em;
+    margin-left: 1.9em;
+}
+a {
+    margin-left: .6em;
 }
