@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../styles/form.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios' 
 
 export class Form extends Component {
 
@@ -35,16 +36,22 @@ export class Form extends Component {
     }
     
     formHandler = () => {
-        const message = `${this.state.username} with email ${this.state.email} \n you're welcome`;
 
-        return alert(message);
+        const email = this.state.email;
+        const username = this.state.username;
+        const password = this.state.password;
+
+        console.log(email, username, password);
+
+       let res = axios.post("localhost:1880/user/signup" , { email , username , password }) ;
+       console.log(res.data);
      }
 
 
     render() {
         return (
           <div>
-                <form className="form" onSubmit={this.formHandler}>
+                <form className="form" method='post' onSubmit={this.formHandler}>
                     <h1>Sign<span>Up</span></h1>
                     <div className="label-input-container">
                         <div className='label-input'>

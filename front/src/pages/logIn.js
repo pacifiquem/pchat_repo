@@ -36,7 +36,7 @@ export class loginForm extends Component {
     render() {
         return (
           <div>
-                <form className="form" id='loginForm' onSubmit={this.formHandler}>
+                <form className="form" id='loginForm' method='post' onSubmit={this.formHandler}>
                     <h1>Log<span>In</span></h1>
                     <div className="label-input-container">
                         <div className='label-input'>
@@ -56,4 +56,4 @@ export class loginForm extends Component {
     }
 }
 
-export default loginForm
+export default loginForm;

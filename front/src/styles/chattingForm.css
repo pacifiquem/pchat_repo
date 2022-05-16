@@ -1,0 +1,25 @@
+.chattContainer {
+    height: 7vh;
+    width: 39.5vw;
+    border: 1px grey solid;
+    position: absolute;
+    bottom: .2em;
+    margin-left: .2em;
+}
+
+.chattContainer form {
+    height: 6.5vh;
+    width: 38vw;
+    margin: auto;
+}
+
+.chattContainer form [type="text"] {
+    display: inline-block;
+    height: 5vh;
+    width: 30vw;
+}
+input{
+    border: none;
+    background-color: white;
+    margin-top: .4em;
+}
