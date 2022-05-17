@@ -29,7 +29,6 @@ export class Form extends Component {
     }
 
     passwordHandler = (event) => {
-     
         this.setState({
        password: `${event.target.value}`   
     })
@@ -43,8 +42,14 @@ export class Form extends Component {
 
         console.log(email, username, password);
 
-       let res = axios.post("localhost:1880/user/signup" , { email , username , password }) ;
-       console.log(res.data);
+        const res = axios.post(" http://localhost:1880/users/signup", {
+            email : this.state.email,
+            usernamae: this.state.username,
+            password: this.state.password
+        })
+        console.log(res);
+
+        return res;
      }
 
 
